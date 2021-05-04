@@ -36,6 +36,8 @@ def msg_test(event=None, context=None):
                         count = count + 1
         bd.append(str(i['district_name'])+" - " + str(count) + " slots")
         print(bd)
+    
+    #Message being sent to whatsapp
     message = client.messages.create(
         from_='whatsapp:+1XXXXXXX',      #whatsapp_from 
         body=format(bd[0]+"\n"+bd[1]+"\n"+bd[2]),  #message_body
